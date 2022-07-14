@@ -1,0 +1,9 @@
+{
+    "name": "dominik/config",
+    "autoload": {
+        "psr-4": {
+            "Dominik\\Config\\": "src/"
+        }
+    },
+    "require": {}
+}
