@@ -195,7 +195,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
        // Dominik\Config\ConfigServiceProvider::class,
-        Dominik\Config\ConfigServiceProvider::class
+        Dominik\Config\ConfigServiceProvider::class,
 
     ],
 
