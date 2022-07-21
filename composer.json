@@ -10,9 +10,13 @@
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
+        "irazasyed/telegram-bot-sdk": "^3.8",
+        "laravel-notification-channels/google-chat": "^3.0",
+        "laravel-notification-channels/telegram": "^2.1",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "pschocke/laravel-telegram-login-widget": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

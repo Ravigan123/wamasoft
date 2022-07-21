@@ -14,8 +14,21 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body class="antialiased">
-        {{ $data }}
-        
+        <div class="container">
+            <form action="{{ route('configKey.send') }}" method="post">
+                {{-- <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1">
+                </div> --}}
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Treść</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="tresc" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    Wyślij
+                </button>
+            </form>
+        </div>
         <script src=" {{ asset('js/app.js') }}"></script>
     </body>
 </html>

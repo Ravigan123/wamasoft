@@ -26,9 +26,9 @@ class ConfigServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
-        $this->loadViewsFrom(__DIR__.'/views', 'cos');
+        $this->loadViewsFrom(__DIR__.'/views', 'config');
         $this->publishes([
-            __DIR__.'/views' => base_path('resources/views/cos'),
+            __DIR__.'/views' => base_path('resources/views/config'),
         ]);
         //include __DIR__.'/routes.php';
     }

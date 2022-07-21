@@ -65,7 +65,28 @@ class QualityController extends Controller
      */
     public function data(Request $request)
     {
-        dd($_GET);
+        $path = "data.json";
+
+        $file = fopen($path, "w") or die("Unable to open file!");
+        fwrite($file, json_encode($_GET).PHP_EOL);
+        fclose($file);
+        $handle = fopen($path, "r");
+        if ($handle) 
+        {
+            while (($line = fgets($handle)) !== false) 
+            {
+                echo $line;
+                echo"<br>";
+                $jsonArray = json_decode($line,true);
+                foreach($jsonArray as $key=>$value)
+                {
+                    echo $key . " => " . $value . "<br>";
+                }
+            }
+        fclose($handle);
+        }
+
+
 
         // foreach ($request->all() as $data){
         //     Quality::insert([

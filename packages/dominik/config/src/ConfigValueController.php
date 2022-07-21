@@ -1,20 +1,36 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Dominik\Config;
 
-use App\Models\ConfigValue;
+use App\Http\Controllers\Controller;
+use Dominik\Config\Models\ConfigKey;
+use Dominik\Config\Models\ConfigValue;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ConfigValueController extends Controller
 {
-    /**
+      /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * 
+     * @return View
      */
-    public function index()
+    public function index($id): View
     {
-        //
+        // $data = DB::table('configKeys')->select('*')->get();
+        // $data = ConfigKey::all();
+
+        $data = DB::table('configValues')->select('*')
+        ->where("configKeys_id", $id)->get();
+        // $data = DB::table('configValues')
+        //     ->join('configValues', 'configKeys.id', '=', 'configValues.configKeys_id')
+        //     ->select('*')
+        //     ->where('configKeys_id', $id)->get();
+            // ->where('titles.name_title', 'statusCPU')
+            // ->where('servers.name', 'server2')
+
+        return view('config/details', [ 'data' => $data ]);
     }
 
     /**

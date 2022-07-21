@@ -92,4 +92,20 @@ SELECT servers.name,
   max(case when titles.name_title = 'statusGPU' then qualities.worth else 0 end) as statusGPU
 FROM servers INNER JOIN serverTitles ON servers.id = serverTitles.server_id INNER JOIN titles ON serverTitles.title_id = titles.id INNER JOIN qualities ON serverTitles.id = qualities.serverTitle_id WHERE qualities.id IN (SELECT MAX(id) AS id
              FROM qualities  
-             GROUP BY serverTitle_id) GROUP BY servers.name ;;
+             GROUP BY serverTitle_id) GROUP BY servers.name ;
+
+
+
+             SELECT servers.name, 
+  max(case when cameras.ip_camera= 'offline' then cameras.ip_camera else 0 end) as offline,
+  max(case when titles.name_title = 'statusCPU' then concat(qualities.code,"-", qualities.worth) else 0 end) as statusCPU,
+  max(case when titles.name_title = 'statusGPU' then qualities.worth else 0 end) as statusGPU
+FROM servers INNER JOIN serverTitles ON servers.id = serverTitles.server_id INNER JOIN titles ON serverTitles.title_id = titles.id INNER JOIN qualities ON serverTitles.id = qualities.serverTitle_id  INNER JOIN cameraServers ON cameraServers.server_id = servers.id INNER JOIN cameras ON cameraServers.camera_id = cameras.id INNER JOIN cameraValues ON cameraValues.cameraServer_id = cameras.id  WHERE qualities.id IN (SELECT MAX(id) AS id
+             FROM qualities  
+             GROUP BY serverTitle_id) GROUP BY servers.name ;
+
+
+
+kamery
+
+SELECT servers.name, cameras.ip_camera, cameraValues.status FROM servers INNER JOIN cameraServers ON servers.id = cameraServers.server_id INNER JOIN cameras ON cameraServers.camera_id = cameras.id INNER JOIN cameraValues ON cameraValues.cameraServer_id = cameraServers.id;

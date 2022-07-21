@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5aa33c4c9c59a25291445d8226153066",
+    "content-hash": "264f27e9e0be636377016e627ecba8f6",
     "packages": [
         {
             "name": "brick/math",
@@ -894,6 +894,206 @@
             "time": "2022-06-20T21:43:11+00:00"
         },
         {
+            "name": "irazasyed/telegram-bot-sdk",
+            "version": "v3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/irazasyed/telegram-bot-sdk.git",
+                "reference": "b8b73c9b6cca0aa7778ea8a49c18e33f3cb5f59b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/irazasyed/telegram-bot-sdk/zipball/b8b73c9b6cca0aa7778ea8a49c18e33f3cb5f59b",
+                "reference": "b8b73c9b6cca0aa7778ea8a49c18e33f3cb5f59b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.5.8 || ^7.4.5",
+                "guzzlehttp/psr7": "^1.9 || ^2.2",
+                "illuminate/support": "5.5 - 9",
+                "league/event": "^2.1",
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "php-parallel-lint/php-parallel-lint": "^1.3",
+                "phpunit/phpunit": "^9.5"
+            },
+            "suggest": {
+                "illuminate/container": "Hold dependencies to be injected in commands constructors",
+                "irazasyed/larasupport": "Allows you to use any Laravel Package in Lumen by adding support!"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Telegram\\Bot\\Laravel\\TelegramServiceProvider"
+                    ],
+                    "aliases": {
+                        "Telegram": "Telegram\\Bot\\Laravel\\Facades\\Telegram"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Telegram\\Bot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Syed Irfaq R.",
+                    "email": "syed+gh@lukonet.com",
+                    "homepage": "https://github.com/irazasyed"
+                }
+            ],
+            "description": "The Unofficial Telegram Bot API PHP SDK",
+            "homepage": "https://github.com/irazasyed/telegram-bot-sdk",
+            "keywords": [
+                "laravel",
+                "laravel telegram",
+                "telegram",
+                "telegram bot",
+                "telegram bot api",
+                "telegram php",
+                "telegram sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/irazasyed/telegram-bot-sdk/issues",
+                "source": "https://github.com/irazasyed/telegram-bot-sdk/tree/v3.8"
+            },
+            "time": "2022-07-09T04:21:27+00:00"
+        },
+        {
+            "name": "laravel-notification-channels/google-chat",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-notification-channels/google-chat.git",
+                "reference": "67e3da834046d16dff1913dfc7ebe9e7b7262081"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-notification-channels/google-chat/zipball/67e3da834046d16dff1913dfc7ebe9e7b7262081",
+                "reference": "67e3da834046d16dff1913dfc7ebe9e7b7262081",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "illuminate/notifications": "^9.0.2",
+                "illuminate/support": "^9.0.2",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0",
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NotificationChannels\\GoogleChat\\GoogleChatServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\GoogleChat\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank Dixon",
+                    "email": "frank@thetreehouse.family",
+                    "homepage": "https://thetreehouse.family",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Google Chat Notification Channel for Laravel (fka. Hangouts Chat)",
+            "homepage": "https://github.com/laravel-notification-channels/google-chat",
+            "support": {
+                "issues": "https://github.com/laravel-notification-channels/google-chat/issues",
+                "source": "https://github.com/laravel-notification-channels/google-chat/tree/v3.0.0"
+            },
+            "time": "2022-04-30T00:43:27+00:00"
+        },
+        {
+            "name": "laravel-notification-channels/telegram",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-notification-channels/telegram.git",
+                "reference": "76299fa06f48cb175e17ea951ccf3b185329a1ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-notification-channels/telegram/zipball/76299fa06f48cb175e17ea951ccf3b185329a1ac",
+                "reference": "76299fa06f48cb175e17ea951ccf3b185329a1ac",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.0",
+                "illuminate/contracts": "8.45 - 9",
+                "illuminate/notifications": "8.45 - 9",
+                "illuminate/support": "8.45 - 9",
+                "php": "^7.4 || ^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NotificationChannels\\Telegram\\TelegramServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NotificationChannels\\Telegram\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Irfaq Syed",
+                    "email": "github@lukonet.net",
+                    "homepage": "https://lukonet.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Telegram Notifications Channel for Laravel",
+            "homepage": "https://github.com/laravel-notification-channels/telegram",
+            "keywords": [
+                "laravel",
+                "notification",
+                "telegram",
+                "telegram notification",
+                "telegram notifications channel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-notification-channels/telegram/issues",
+                "source": "https://github.com/laravel-notification-channels/telegram/tree/2.1.0"
+            },
+            "time": "2022-07-01T02:14:31+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v9.19.0",
             "source": {
@@ -1451,6 +1651,60 @@
                 }
             ],
             "time": "2021-08-14T12:15:32+00:00"
+        },
+        {
+            "name": "league/event",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/event.git",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/event/zipball/d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+                "reference": "d2cc124cf9a3fab2bb4ff963307f60361ce4d119",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
+                "phpspec/phpspec": "^2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Event\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Event package",
+            "keywords": [
+                "emitter",
+                "event",
+                "listener"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/event/issues",
+                "source": "https://github.com/thephpleague/event/tree/master"
+            },
+            "time": "2018-11-26T11:52:41+00:00"
         },
         {
             "name": "league/flysystem",
@@ -2077,6 +2331,68 @@
                 }
             ],
             "time": "2021-12-04T23:24:31+00:00"
+        },
+        {
+            "name": "pschocke/laravel-telegram-login-widget",
+            "version": "v2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pschocke/laravel-telegram-login-widget.git",
+                "reference": "27ae71e93267fdb785cd1e46f544bc9c6779d33f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pschocke/laravel-telegram-login-widget/zipball/27ae71e93267fdb785cd1e46f544bc9c6779d33f",
+                "reference": "27ae71e93267fdb785cd1e46f544bc9c6779d33f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~9"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.1",
+                "orchestra/testbench": "~7",
+                "phpunit/phpunit": "^9",
+                "sempro/phpunit-pretty-print": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "pschocke\\TelegramLoginWidget\\TelegramLoginWidgetServiceProvider"
+                    ],
+                    "aliases": {
+                        "MyPackage": "pschocke\\TelegramLoginWidget\\Facades\\MyPackage"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "pschocke\\TelegramLoginWidget\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Schocke",
+                    "email": "patrick@ausbildung-ms.de",
+                    "homepage": "https://github.com/pschocke/"
+                }
+            ],
+            "description": "Easily integrate Telegrams login widget into your Laravel application to send Telegram messages",
+            "homepage": "https://github.com/pschocke/telegramloginwidget",
+            "keywords": [
+                "TelegramLoginWidget",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/pschocke/laravel-telegram-login-widget/issues",
+                "source": "https://github.com/pschocke/laravel-telegram-login-widget/tree/v2"
+            },
+            "time": "2022-04-02T10:00:28+00:00"
         },
         {
             "name": "psr/container",

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\QualityController;
+use App\Http\Controllers\TelegramController;
 use App\Http\Controllers\ServerTitleController;
 use App\Models\ServerTitle;
 use Illuminate\Support\Facades\Route;
