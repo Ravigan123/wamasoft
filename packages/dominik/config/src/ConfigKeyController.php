@@ -33,15 +33,17 @@ class ConfigKeyController extends Controller
      */
     public function form(): View
     {
-        return view('config/form');
+        $data = DB::table('configValues')->select('*')
+        ->where("configKeys_id", 3)->get();
+        return view('config/form', [ 'data' => $data ]);
     }
 
-    
+    // -617943651
+    // -787810876
 
     public function send(Request $request) {
         $updates = new Telegram(token:"5472359963:AAHrB4WrocBGFJVyDdowvgIU8BWh1KwzbpY");
-        $updates->sendMessage(['text' => $request->tresc, "chat_id" => "-787810876"]);
-
+        $updates->sendMessage(['text' => $request->tresc, "chat_id" => $request->room]);
         return redirect('/config/form');
     }
 
