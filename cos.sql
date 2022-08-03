@@ -109,3 +109,4 @@ FROM servers INNER JOIN serverTitles ON servers.id = serverTitles.server_id INNE
 kamery
 
 SELECT servers.name, cameras.ip_camera, cameraValues.status FROM servers INNER JOIN cameraServers ON servers.id = cameraServers.server_id INNER JOIN cameras ON cameraServers.camera_id = cameras.id INNER JOIN cameraValues ON cameraValues.cameraServer_id = cameraServers.id;
+

@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('Telegram:send')->cron('*/1 * * * *');
+        // $schedule->call('Dominik\Config\ConfigMessageController@SendMessage')->cron('*/1 * * * *');
     }
 
     /**

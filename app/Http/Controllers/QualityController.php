@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Server;
 use App\Models\Title;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class QualityController extends Controller
 {
@@ -44,7 +45,10 @@ class QualityController extends Controller
 
         $query = Server::all()->groupBy('name');
 
-        return view('index', [ 'dane' => $dane , 'query' => $query]);
+        $now = time();
+        $currentTime = Carbon::now();
+
+        return view('index', [ 'dane' => $dane , 'query' => $query, 'now' => $now, 'currentTime' => $currentTime]);
     }
 
     /**

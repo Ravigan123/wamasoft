@@ -21,11 +21,12 @@
                     <input type="email" name="email" class="form-control" id="exampleFormControlInput1">
                 </div> --}}
                 <select class="form-select" name="room" aria-label="Default select example">
-                    <option value="room" disabled selected>Wybierz pokój</option>
+                    <option value="room" selected disabled>Wybierz pokój</option>
                         @foreach($data as $item)
                             <option value="{{ $item->value_worth }}">{{ $item->value_name }}</option>
                         @endforeach
                 </select>
+
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label"></label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" name="tresc" rows="3" placeholder="Treść"></textarea>

@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body class="antialiased">
-        {{ $query }}
+        {{ $now }}
+        {{ $currentTime }}
         <div class="container">
             <table class="table table-hover">
                 <thead>
